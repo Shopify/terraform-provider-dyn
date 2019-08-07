@@ -1,0 +1,16 @@
+{
+  "status": "success", "job_id": 12345678,
+  "data": {
+    "rulesets": [],
+    "label": "insert-label-here",
+    "notifiers": [],
+    "ttl": "60",
+    "active": "N",
+    "service_id": "insert-service-id-here",
+    "nodes": [],
+    "pending_change": ""
+  },
+  "msgs": [
+    {"INFO": "detail: Here is your service", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}
+  ]
+}

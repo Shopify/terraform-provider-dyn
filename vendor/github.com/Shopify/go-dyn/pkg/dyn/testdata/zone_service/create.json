@@ -1,0 +1,12 @@
+{
+  "status": "success", "job_id": 12345678,
+  "msgs": [
+    {"INFO": "create: go-dyn-test-create.go-dyn.com created", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}
+  ],
+  "data": {
+    "zone_type": "Primary",
+    "serial_style": "increment",
+    "serial": 0,
+    "zone": "go-dyn-test-create.go-dyn.com"
+  }
+}

@@ -1,0 +1,23 @@
+name: go-dyn
+
+type: go
+
+up:
+  - homebrew:
+    - openssl
+  - go:
+      version: 1.11
+
+# `dev run` runs `dev build` and then `dev run-built` if these are both defined.
+commands:
+  build:
+    run: DUMMY="$@" go build -o bin/dynctl cmd/dynctl/main.go
+  run-built:
+    run: bin/dynctl "$@"
+  test:
+    run: |
+      if [[ $# -eq 0 ]]; then
+        build/test.sh cmd pkg
+      else
+        go test -v ./pkg/... -run "$@"
+      fi

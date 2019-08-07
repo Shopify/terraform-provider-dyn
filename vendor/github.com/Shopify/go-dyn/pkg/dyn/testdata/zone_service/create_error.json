@@ -1,0 +1,8 @@
+{
+  "status": "failure", "job_id": 12345678,
+  "msgs": [
+    {"INFO": "name: Name already exists", "SOURCE": "BLL", "ERR_CD": "TARGET_EXISTS", "LVL": "ERROR"},
+    {"INFO": "create: You already have this zone.", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}
+  ],
+  "data": {}
+}

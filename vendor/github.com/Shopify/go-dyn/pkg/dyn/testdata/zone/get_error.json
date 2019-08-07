@@ -1,0 +1,5 @@
+{
+  "status": "failure", "job_id": 12345678,
+  "msgs": [{"INFO": "zone: No such zone", "SOURCE": "API-B", "ERR_CD": "NOT_FOUND", "LVL": "ERROR"}],
+  "data": {}
+}

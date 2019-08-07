@@ -1,0 +1,13 @@
+{
+  "status": "success", "job_id": 12345678,
+  "msgs": [
+    {"INFO": "publish: go-dyn-test-publish.go-dyn.com published", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}
+  ],
+  "data": {
+    "zone_type": "Primary",
+    "task_id": "302143535",
+    "serial": 1,
+    "serial_style": "increment",
+    "zone": "go-dyn-test-publish.go-dyn.com"
+  }
+}

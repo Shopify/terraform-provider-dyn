@@ -1,0 +1,13 @@
+{
+  "status": "success", "job_id": 12345678,
+  "msgs": [{"INFO": "get: Your 7 zones", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}],
+  "data": [
+    {"zone_type": "Primary", "serial_style": "increment", "serial": 11, "zone": "zone-1.co"},
+    {"zone_type": "Primary", "serial_style": "increment", "serial": 22, "zone": "zone-2.co"},
+    {"zone_type": "Primary", "serial_style": "increment", "serial": 33, "zone": "zone-3.co"},
+    {"zone_type": "Primary", "serial_style": "increment", "serial": 44, "zone": "zone-4.co"},
+    {"zone_type": "Primary", "serial_style": "increment", "serial": 55, "zone": "zone-5.co"},
+    {"zone_type": "Primary", "serial_style": "increment", "serial": 66, "zone": "zone-6.co"},
+    {"zone_type": "Primary", "serial_style": "increment", "serial": 77, "zone": "zone-7.co"}
+  ]
+}

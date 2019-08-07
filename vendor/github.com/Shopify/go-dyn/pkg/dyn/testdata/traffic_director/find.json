@@ -1,0 +1,8 @@
+{
+  "status": "success", "job_id": 12345678,
+  "data": [
+    {
+      "rulesets": [], "label": "service 3", "notifiers": [], "ttl": "15", "active": "Y", "service_id": "service-3", "nodes": [], "pending_change": ""
+    }
+  ]
+}

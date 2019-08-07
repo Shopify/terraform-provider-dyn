@@ -1,0 +1,5 @@
+{
+  "status": "success", "job_id": 12345678,
+  "msgs": [{"INFO": "get: Your zone, go-dyn.com", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}],
+  "data": {"zone_type": "Primary", "serial_style": "minute", "serial": 1902190535, "zone": "go-dyn.com"}
+}

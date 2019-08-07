@@ -1,0 +1,20 @@
+{
+  "status": "success", "job_id": 1387784546,
+  "data": [
+    {
+      "rulesets": [], "label": "service 1", "notifiers": [], "ttl": "15", "active": "Y", "service_id": "service-1", "nodes": [], "pending_change": ""
+    },
+    {
+      "rulesets": [], "label": "service 2", "notifiers": [], "ttl": "15", "active": "Y", "service_id": "service-2", "nodes": [], "pending_change": ""
+    },
+    {
+      "rulesets": [], "label": "service 3", "notifiers": [], "ttl": "15", "active": "Y", "service_id": "service-3", "nodes": [], "pending_change": ""
+    },
+    {
+      "rulesets": [], "label": "service 4", "notifiers": [], "ttl": "15", "active": "Y", "service_id": "service-4", "nodes": [], "pending_change": ""
+    },
+    {
+      "rulesets": [], "label": "service 5", "notifiers": [], "ttl": "15", "active": "N", "service_id": "service-5", "nodes": [], "pending_change": ""
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "status": "failure", "job_id": 12345678,
+  "msgs": [
+    {"INFO": "login: Invalid credentials", "SOURCE": "BLL", "ERR_CD": "INVALID_DATA", "LVL": "ERROR"},
+    {"INFO": "login: Login failed", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}],
+  "data": {}
+}
