@@ -1,0 +1,60 @@
+{
+  "status": "success", "job_id": 1388281374,
+  "data": {
+    "a_records": [
+      {"zone": "go-dyn.com", "ttl": 3600, "fqdn": "a.go-dyn.com", "record_type": "A", "rdata": {"address": "10.1.2.3"}, "record_id": 431992190}
+    ],
+    "aaaa_records": [
+      {"zone": "go-dyn.com", "ttl": 3600, "fqdn": "aaaa.go-dyn.com", "record_type": "AAAA", "rdata": {"address": "fdfe:972e:46c1:6ed0:0000:0001:0002:0003"}, "record_id": 431992191}
+    ],
+    "alias_records": [
+      {"zone": "go-dyn.com", "ttl": 30, "fqdn": "alias.go-dyn.com", "record_type": "ALIAS", "rdata": {"alias": "go-dyn.com."}, "record_id": 431992192}
+    ],
+    "caa_records": [
+      {"zone": "go-dyn.com", "ttl": 1800, "fqdn": "caa.go-dyn.com", "record_type": "CAA", "rdata": {"tag": "issue", "flags": 0, "value": "letsencrypt.org"}, "record_id": 431992193}
+    ],
+    "cdnskey_records": [],
+    "cds_records": [],
+    "cert_records": [],
+    "cname_records": [
+      {"zone": "go-dyn.com", "ttl": 900, "fqdn": "cname.go-dyn.com", "record_type": "CNAME", "rdata": {"cname": "go-dyn.example.com."}, "record_id": 431992194}
+    ],
+    "csync_records": [],
+    "dhcid_records": [],
+    "dname_records": [],
+    "dnskey_records": [],
+    "ds_records": [],
+    "ipseckey_records": [],
+    "key_records": [],
+    "kx_records": [],
+    "loc_records": [],
+    "mx_records": [
+      {"zone": "go-dyn.com", "ttl": 3600, "fqdn": "mx.go-dyn.com", "record_type": "MX", "rdata": {"preference": 10, "exchange": "mail.example.com."}, "record_id": 431993337}
+    ],
+    "naptr_records": [],
+    "ns_records": [
+      {"zone": "go-dyn.com", "service_class": "", "ttl": 86400, "fqdn": "go-dyn.com", "record_type": "NS", "rdata": {"nsdname": "ns1.p19.dynect.net."}, "record_id": 424641419},
+      {"zone": "go-dyn.com", "service_class": "", "ttl": 86400, "fqdn": "go-dyn.com", "record_type": "NS", "rdata": {"nsdname": "ns2.p19.dynect.net."}, "record_id": 424641420},
+      {"zone": "go-dyn.com", "service_class": "", "ttl": 86400, "fqdn": "go-dyn.com", "record_type": "NS", "rdata": {"nsdname": "ns3.p19.dynect.net."}, "record_id": 424641421},
+      {"zone": "go-dyn.com", "service_class": "", "ttl": 86400, "fqdn": "go-dyn.com", "record_type": "NS", "rdata": {"nsdname": "ns4.p19.dynect.net."}, "record_id": 424641422}
+    ],
+    "nsap_records": [],
+    "policy_records": [],
+    "ptr_records": [],
+    "px_records": [],
+    "rp_records": [],
+    "sshfp_records": [],
+    "soa_records": [
+      {"zone": "go-dyn.com", "ttl": 3600, "fqdn": "go-dyn.com", "record_type": "SOA", "rdata": {"rname": "admin@example.com.", "retry": 600, "mname": "ns1.p19.dynect.net.", "minimum": 1800, "refresh": 3600, "expire": 604800, "serial": 1903162152}, "record_id": 424641418, "serial_style": "minute"}
+    ],
+    "spf_records": [],
+    "srv_records": [
+      {"zone": "go-dyn.com", "ttl": 3600, "fqdn": "srv.go-dyn.com", "record_type": "SRV", "rdata": {"priority": 10, "port": 443, "weight": 100, "target": "www.example.com."}, "record_id": 431993338}
+    ],
+    "tlsa_records": [],
+    "txt_records": [
+      {"zone": "go-dyn.com", "ttl": 7200, "fqdn": "txt.go-dyn.com", "record_type": "TXT", "rdata": {"txtdata": "hello world"}, "record_id": 431993339}
+    ]
+  },
+  "msgs": [{"INFO": "get_tree: Here is your zone tree", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}]
+}

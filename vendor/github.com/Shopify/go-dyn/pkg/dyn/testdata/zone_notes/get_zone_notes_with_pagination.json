@@ -1,0 +1,14 @@
+{
+  "status": "success", "job_id": 12345678,
+  "msgs": [{"INFO": "notes: Found 1 note", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}],
+  "data": [
+    {
+      "zone": "go-dyn.com", "user_name": "insert-user", "note": "note 3\n",
+      "timestamp": "1552203213", "serial": 1903100333, "type": "publish"
+    },
+    {
+      "zone": "go-dyn.com", "user_name": "insert-user", "note": "note 2\n",
+      "timestamp": "1552198942", "serial": 1903100222, "type": "publish"
+    }
+  ]
+}

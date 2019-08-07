@@ -1,0 +1,5 @@
+{
+  "status": "success", "job_id": 12345678,
+  "msgs":[{"INFO": "login: Login successful", "SOURCE": "BLL", "ERR_CD": null, "LVL": "INFO"}],
+  "data":{"token":"insert-token-here", "version":"3.7.9"}
+}
