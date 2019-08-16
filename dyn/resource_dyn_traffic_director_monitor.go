@@ -14,6 +14,9 @@ func resourceDynTrafficDirectorMonitor() *schema.Resource {
 		Read:   resourceDynTrafficDirectorMonitorRead,
 		Update: resourceDynTrafficDirectorMonitorUpdate,
 		Delete: resourceDynTrafficDirectorMonitorDelete,
+		Importer: &schema.ResourceImporter{
+			State: resourceDynTrafficDirectorMonitorImportState,
+		},
 
 		Schema: map[string]*schema.Schema{
 			"label": {
@@ -160,17 +163,10 @@ func resourceDynTrafficDirectorMonitorRead(d *schema.ResourceData, meta interfac
 		return fmt.Errorf("Couldn't find Dyn Traffic Director Monitor: %s", err)
 	}
 
-	d.Set("label", tdm.Label)
-	d.Set("retries", tdm.Retries)
-	d.Set("protocol", tdm.Protocol)
-	d.Set("response_count", tdm.ResponseCount)
-	d.Set("probe_interval", tdm.ProbeInterval)
-	d.Set("active", tdm.Active)
-	d.Set("header", tdm.Options.Header)
-	d.Set("host", tdm.Options.Host)
-	d.Set("expected", tdm.Options.Expected)
-	d.Set("path", tdm.Options.Path)
-	d.Set("port", tdm.Options.Port)
+	err = resourceDynTrafficDirectorMonitorToResourceData(tdm, d)
+	if err != nil {
+		return fmt.Errorf("Couldn't convert Dyn Traffic Director Monitor: %s", err)
+	}
 
 	return nil
 }
@@ -213,5 +209,51 @@ func resourceDynTrafficDirectorMonitorDelete(d *schema.ResourceData, meta interf
 	}
 
 	d.SetId("")
+	return nil
+}
+
+func resourceDynTrafficDirectorMonitorImportState(d *schema.ResourceData, meta interface{}) ([]*schema.ResourceData, error) {
+	results := make([]*schema.ResourceData, 1, 1)
+
+	clientList := meta.(accessControlledClientList)
+	client, err := clientList.Acquire()
+	if err != nil {
+		return nil, err
+	}
+	defer clientList.Release(client)
+
+	log.Printf("[DEBUG] Trying to get Traffic Director Monitor using id: %s", d.Id())
+	tdm, err := client.GetTrafficDirectorMonitor(d.Id())
+	if err != nil {
+		log.Printf("[DEBUG] Error: %s / Trying to get Traffic Director Monitor using label: %s", err, d.Id())
+		tdm, err = client.FindTrafficDirectorMonitor(d.Id())
+		if err != nil {
+			return nil, fmt.Errorf("Couldn't find Dyn Traffic Director Monitor: %s", err)
+		}
+	}
+
+	d.SetId(tdm.MonitorID)
+	err = resourceDynTrafficDirectorMonitorToResourceData(tdm, d)
+	if err != nil {
+		return nil, fmt.Errorf("Couldn't convert Dyn Traffic Director Monitor: %s", err)
+	}
+	results[0] = d
+
+	return results, nil
+}
+
+func resourceDynTrafficDirectorMonitorToResourceData(tdm *dyn.TrafficDirectorMonitor, d *schema.ResourceData) error {
+	d.Set("label", tdm.Label)
+	d.Set("retries", tdm.Retries)
+	d.Set("protocol", tdm.Protocol)
+	d.Set("response_count", tdm.ResponseCount)
+	d.Set("probe_interval", tdm.ProbeInterval)
+	d.Set("active", tdm.Active)
+	d.Set("header", tdm.Options.Header)
+	d.Set("host", tdm.Options.Host)
+	d.Set("expected", tdm.Options.Expected)
+	d.Set("path", tdm.Options.Path)
+	d.Set("port", tdm.Options.Port)
+
 	return nil
 }
